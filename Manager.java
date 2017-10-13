@@ -79,17 +79,12 @@ public class Manager
 		MovieNode previous = null;
 		MovieNode current = head;
 		boolean isFound = false;
-		String currentName;
 
 		while ((current != null) && (isFound == false))
 		{
-			currentName = current.getName();
-			if (aSearchName.compareToIgnoreCase(currentName) == MATCH)
-			{
-				isFound = true;
-			}
-			else
-			{
+			isFound = compareName(current, aSearchName);
+
+			if(!isFound) {
 				previous = current;
 				current = current.getNext();
 			}
@@ -117,18 +112,13 @@ public class Manager
 	{
 		MovieNode current = head;
 		boolean isFound = false;
-		String currentName;
 		int count = 0;
 
 		while ((current != null)&&(isFound == false))
 		{
-			currentName = current.getName();
-			if (searchName.compareToIgnoreCase(currentName) == MATCH)
-			{
-				isFound = true;
-			}
-			else
-			{
+			isFound = compareName(current, searchName); 
+				
+			if(!isFound) {
 				current = current.getNext();
 				count++;
 			}
@@ -142,6 +132,15 @@ public class Manager
 		{
 			System.out.println("No movie called " + searchName + " was found");
 		}
+	}
+	
+	public boolean compareName(MovieNode current, String searchName) {
+		String currentName = current.getName();
+		if (searchName.compareToIgnoreCase(currentName) == MATCH)
+		{
+			return true;
+		}
+		return false;
 	}
 
 	public MovieNode getHead() {
