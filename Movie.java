@@ -63,5 +63,20 @@ public class Movie
 	public void setRating(int rating) {
 		movie_Rating = rating;
 	}
+	
+	public String toString()
+	{
+		String s = "";
+		if (movie_Name != null){
+			s = s + "Movie Name: " + movie_Name + "\nCast Members: " + cast1 + "\n" + cast2 + "\n" +
+					cast3 + "\nMovie Genre: " + movie_Genre + "\nMovie Rating: " + movie_Rating + "\n";
+		}
+		else
+		{
+			s = s + "Movie Name: No-Name" + "\nCast Members: None" + "\nNone" + "\nNone" +
+			"\nMovie Genre: None" + "\nMovie Rating: No Rating" + "\n";
+		}
+		return s;
+	}
 
 }
