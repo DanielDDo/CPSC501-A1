@@ -135,7 +135,7 @@ public class Manager
 	}
 	
 	public boolean compareName(MovieNode current, String searchName) {
-		String currentName = current.getMovie().movie_Name;
+		String currentName = current.getMovie().getName();
 		if (searchName.compareToIgnoreCase(currentName) == MATCH)
 		{
 			return true;

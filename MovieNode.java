@@ -36,9 +36,9 @@ public class MovieNode
 	public String toString()
 	{
 		String s = "";
-		if (movie.movie_Name!= null){
-			s = s + "Movie Name: " + movie.movie_Name + "\nCast Members: " + movie.cast1 + "\n" + movie.cast2 + "\n" +
-					movie.cast3 + "\nMovie Genre: " + movie.movie_Genre + "\nMovie Rating: " + movie.movie_Rating + "\n";
+		if (movie.getName() != null){
+			s = s + "Movie Name: " + movie.getName() + "\nCast Members: " + movie.getCast1() + "\n" + movie.getCast2() + "\n" +
+					movie.getCast3() + "\nMovie Genre: " + movie.getGenre() + "\nMovie Rating: " + movie.getRating() + "\n";
 		}
 		else
 		{
