@@ -58,7 +58,7 @@ public class UserInterface
 		aRating = in.nextInt();
 		in.nextLine();
 
-		aManager.add(aTitle,c1,c2,c3,aGenre,aRating,true);
+		aManager.add(aTitle,c1,c2,c3,aGenre,aRating);
 	}
 
 	public void displayCollection()

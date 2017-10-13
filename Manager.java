@@ -13,8 +13,8 @@ public class Manager
 		head = null;
 	}
 
-	public void add(String title, String cast1, String cast2, String cast3, String genre, int rating, boolean isShow) {
-		MovieNode newNode = new MovieNode(title, cast1, cast2, cast3, genre, rating, isShow, null);
+	public void add(String title, String cast1, String cast2, String cast3, String genre, int rating) {
+		MovieNode newNode = new MovieNode(title, cast1, cast2, cast3, genre, rating, null);
 
 		if (head == null) {
 			head = newNode;

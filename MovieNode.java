@@ -6,7 +6,6 @@ public class MovieNode
 	private String cast3;
 	private String movie_Genre;
 	private int movie_Rating;
-	private boolean isShow;
 	private MovieNode next;
 
 	public MovieNode()
@@ -17,11 +16,10 @@ public class MovieNode
 		cast3 = null;
 		movie_Genre = null;
 		movie_Rating = -1;
-		isShow = false;
 		setNext(null);
 	}
 
-	public MovieNode(String aTitle, String cast1, String cast2, String cast3, String aGenre, int aRating, boolean isShow, MovieNode nextNode)
+	public MovieNode(String aTitle, String cast1, String cast2, String cast3, String aGenre, int aRating, MovieNode nextNode)
 	{
 		movie_Name = aTitle;
 		this.cast1 = cast1;
@@ -29,7 +27,6 @@ public class MovieNode
 		this.cast3 = cast3;
 		movie_Genre = aGenre;
 		movie_Rating = aRating;
-		this.isShow = isShow;
 		setNext(nextNode);
 	}
 
