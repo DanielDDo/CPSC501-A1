@@ -13,8 +13,8 @@ public class Manager
 		head = null;
 	}
 
-	public void add(String title, String cast1, String cast2, String cast3, String genre, int rating) {
-		MovieNode newNode = new MovieNode(title, cast1, cast2, cast3, genre, rating, null);
+	public void add(Movie movie) {
+		MovieNode newNode = new MovieNode(movie, null);
 
 		if (head == null) {
 			head = newNode;
@@ -135,7 +135,7 @@ public class Manager
 	}
 	
 	public boolean compareName(MovieNode current, String searchName) {
-		String currentName = current.getName();
+		String currentName = current.getMovie().movie_Name;
 		if (searchName.compareToIgnoreCase(currentName) == MATCH)
 		{
 			return true;
